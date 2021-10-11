@@ -9,7 +9,7 @@ namespace Revisao
 
             Aluno[] alunos = new Aluno[5];
             var indiceAluno = 0;
-            string opcaoUsuario = ObterOpcaoUsuario();
+            string opcaoUsuario = obterOpcaoUsuario();
 
             while (opcaoUsuario.ToUpper() != "X")
             {
@@ -18,13 +18,13 @@ namespace Revisao
                     case "1":
                         Console.WriteLine("Informe o nome do aluno:");
                         var aluno = new Aluno();
-                        aluno.Nome = Console.ReadLine();
+                        aluno.nome = Console.ReadLine();
 
-                        Console.Writeline("Informe a nota do aluno:");
+                        Console.WriteLine("Informe a nota do aluno:");
                         
                         if (decimal.TryParse(Console.ReadLine(), out decimal nota))
                         {
-                            aluno.Nota = nota;
+                            aluno.nota = nota;
                         }
                         else
                         {
