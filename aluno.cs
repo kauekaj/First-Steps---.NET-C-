@@ -1,6 +1,6 @@
 namespace Revisao
 {
-    public struct aluno
+    public struct Aluno
     {
         
         public string nome { get; set; }
