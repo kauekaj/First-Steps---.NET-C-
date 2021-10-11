@@ -31,7 +31,7 @@ namespace Revisao
                             throw new ArgumentException("Valor da nota deve serr decimal");
                         }
 
-                        aluno[indiceAluno] = aluno;
+                        alunos[indiceAluno] = aluno;
                         indiceAluno++;
 
                         break;
