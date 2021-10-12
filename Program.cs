@@ -28,7 +28,7 @@ namespace Revisao
                         }
                         else
                         {
-                            throw new ArgumentException("Valor da nota deve serr decimal");
+                            throw new ArgumentException("Valor da nota deve ser decimal");
                         }
 
                         alunos[indiceAluno] = aluno;
@@ -36,7 +36,13 @@ namespace Revisao
 
                         break;
                     case "2":
-                        // TODO: listar alunos                        
+                        foreach (var a in alunos)
+                        {
+                            if (!string.IsNullOrEmpty(a.nome))
+                            {
+                            Console.WriteLine($"Aluno: {a.nome} - Nota: {a.nota}");
+                            }
+                        }                       
                         break;
                     case "3":
                         // TODO: calcular media geral
@@ -55,7 +61,7 @@ namespace Revisao
             Console.WriteLine();
             Console.WriteLine("Informe a opção desejada:");
             Console.WriteLine("1- Inserir novo aluno");
-            Console.WriteLine("2- Listar alunos alunos");
+            Console.WriteLine("2- Listar alunos");
             Console.WriteLine("3- Calcular média geral");
             Console.WriteLine("X- Sair");
             Console.WriteLine();
